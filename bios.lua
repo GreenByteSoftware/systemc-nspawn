@@ -44,6 +44,16 @@ if _VERSION == "Lua 5.1" then
     table.pack = function( ... ) return { ... } end
 
     local nativebit = bit
+		local nativebit = bit
+		bit32 = {}
+		bit32.arshift = nativebit.brshift
+		bit32.band = nativebit.band
+		bit32.bnot = nativebit.bnot
+		bit32.bor = nativebit.bor
+		bit32.btest = function( a, b ) return nativebit.band(a,b) ~= 0 end
+		bit32.bxor = nativebit.bxor
+		bit32.lshift = nativebit.blshift
+		bit32.rshift = nativebit.blogic_rshift
 
     if _CC_DISABLE_LUA51_FEATURES then
         -- Remove the Lua 5.1 features that will be removed when we update to Lua 5.2, for compatibility testing.

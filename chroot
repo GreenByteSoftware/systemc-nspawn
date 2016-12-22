@@ -95,7 +95,7 @@ local reboot = true
 local copied = {"getmetatable","unpack","__inext","_VERSION","redstone","ipairs","term",
                 "coroutine","pcall","math","assert","tonumber","rawequal","write","table",
                 "pairs","collectgarbage","xpcall","error","rawget","type","rs","rawset",
-                "string","setmetatable","select", "tostring","next","disk"}
+                "string","setmetatable","select", "tostring","next","disk", "bit"}
 --Not copied: reboot, shutdown
 local osCopied = {"getComputerLabel","setComputerLabel","day","queueEvent","getComputerID","time","clock","computerID","startTimer","cancelTimer","setAlarm","cancelAlarm"}
 local function sandboxFunction(func)
